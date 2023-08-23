@@ -68,7 +68,7 @@ MONGO_PORT=
 MONGO_DATABASE=bookstore
 ADMIN_USERNAME=adminTera
 ADMIN_PASSWORD=Gloaster@areT
-
+use nvm use v16
 # BookApp Authentication 
 
 This module provides authentication endpoints for logging in and signing up users in a NestJS application.
