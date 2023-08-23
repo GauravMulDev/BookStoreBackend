@@ -1,0 +1,13 @@
+_id,title,description,rating,price,__v
+ObjectId(64df71384d9c4c0225b6bbc6),Test1,Test me,3,40,0
+ObjectId(64df78c730baa83c14d86918),Test,Your book description here,1,30,0
+ObjectId(64df7913c400d9daa421c584),Dump,Your book description here,1,20,0
+ObjectId(64df8712f2bdba126ca2f4a4),Restt,Your book description heressss,4,300,0
+ObjectId(64df8b2270a13f3f5cc2a27f),Restt,Your book description heressss,4,300,0
+ObjectId(64df8b3470a13f3f5cc2a281),better,Your book description heressss,5,310,0
+ObjectId(64df8b9070a13f3f5cc2a283),share,Your book description heressss,5,1000,0
+ObjectId(64df8b9570a13f3f5cc2a285),Fare,Your book description heressss,0,900,0
+ObjectId(64df8cd20c90db9f64a5a431),Restt,Your book description heressss,4,300,0
+ObjectId(64df8d1e0c90db9f64a5a433),Treat,Your book description heressss,4,10,0
+ObjectId(64df8d220c90db9f64a5a435),Jest,Your book description heressss,3,500,0
+ObjectId(64e0970e157883546b0849fb),Glow,Your book description heressss,4,200,0
