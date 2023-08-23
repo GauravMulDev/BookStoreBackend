@@ -22,45 +22,40 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## 🛠️ Scripts
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Here's a quick overview of the available scripts:
 
-## Installation
+- `npm run build`: Compiles the TypeScript code.
+- `npm run format`: Auto-formats code using Prettier.
+- `npm run start`: Starts the application.
+- `npm run start:dev`: Starts the application with hot-reload.
+- `npm run start:debug`: Starts the application in debug mode with hot-reload.
+- `npm run start:prod`: Starts the compiled JavaScript application.
+- `npm run lint`: Lints the codebase using ESLint.
+- `npm run test`: Runs the test suite using Jest.
+- `npm run test:watch`: Runs the test suite in watch mode.
+- `npm run test:cov`: Outputs test coverage.
+- `npm run test:debug`: Runs tests in debug mode.
 
-```bash
-$ npm install
-```
+## 📦 Dependencies
 
-## Running the app
+The API integrates several npm packages to deliver its functionality:
 
-```bash
-# development
-$ npm run start
+- **Core**: NestJS modules like `@nestjs/common`, `@nestjs/core`, and others.
+- **Database**: Mongoose (`mongoose`, `@nestjs/mongoose`) is used for MongoDB interactions.
+- **Authentication**: `@nestjs/jwt`, `@nestjs/passport`, and related packages.
+- **File Handling**: Multer (`multer`) for handling file uploads.
+- **Testing**: Jest (`jest`) for testing, along with related packages.
+- **TIntegration esting**: Cyprus for e2e, along with related packages.
 
-# watch mode
-$ npm run start:dev
+## 🚀 Getting Started
 
-# production mode
-$ npm run start:prod
-```
+1. Clone the repository.
+2. Navigate to the project directory and run `npm install` to fetch all the necessary dependencies.
+3. Use the provided scripts (mentioned above) to start, build, or test the application.
+4. Ensure environment variables or configurations (like `ADMIN_USERNAME` and `ADMIN_PASSWORD`) are set appropriately if needed.
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 # BookApp Authentication 
 
 This module provides authentication endpoints for logging in and signing up users in a NestJS application.
@@ -157,6 +152,55 @@ This controller provides CRUD and related functionalities for books within a Nes
 2. For routes that have guards commented out, you can uncomment the `@UseGuards(JwtAuthGuard)` decorator to enable JWT-based authentication for those routes.
 3. Ensure you have the necessary middleware and modules for file handling, such as `@nestjs/platform-express` for the `FileInterceptor`.
 4. For routes interacting with files, ensure a valid file storage directory exists, and error handling is in place if the file is not found.
+## 📖 AdminAuthMiddleware and Image Handling in NestJS
+
+This section provides an overview of the current state of the application, with a focus on the `AdminAuthMiddleware` and image management using Multer.
+
+---
+
+### 🎯 **Current Implementations**
+
+#### 1. **AdminAuthMiddleware**
+- This middleware decodes the Authorization header's value, matching the provided credentials against the configured admin credentials
+
+#### 2. **Image Handling with Multer**
+- An image upload feature using Multer has been added. This functionality is aimed to receive image uploads from clients and subsequently send the images to the frontend for UI display.
+
+#### 3. **Testing**
+-est cases have been written using Jest for the existing functionality.
+
+---
+
+### 🚧 **Current State & Limitations**
+
+#### 1. **Multer Implementation**
+- The Multer-based image handling functionality is half-implemented. Currently, it supports receiving images, but the frontend display aspect is incomplete.
+
+#### 2. **Admin Guard**
+- An admin guard (AdminAuthMiddleware) has been created. However, it's not fully implemented across routes, making it inactive in its protective role.
+
+#### 3. **Testing with Jest**
+- Jest is employed for testing, but not captured any test cases
+
+---
+
+### 🔍 **Recommendations & Improvements**
+
+#### 1. **Modularization**
+- The API can benefit from being broken down into multiple modules, segregating functionality for better maintainability.
+- 
+#### 2. **Middleware & Interfaces for DB**
+- Introducing specific middleware and interfaces tailored for database interactions can help centralize and manage database-related calls, ensuring uniformity and potential optimizations.
+
+#### 3. **Admin Guard Implementation**
+- The AdminAuthMiddleware should be thoroughly integrated across necessary routes to ensure security
+
+#### 4. **Authentication Methods**
+- While the basic authentication provided by the middleware is straightforward, consider leveraging JWT, OAuth, or other advanced methods for increased security.
+- 
+
+
+
 
 
 
