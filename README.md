@@ -56,6 +56,19 @@ The API integrates several npm packages to deliver its functionality:
 3. Use the provided scripts (mentioned above) to start, build, or test the application.
 4. Ensure environment variables or configurations (like `ADMIN_USERNAME` and `ADMIN_PASSWORD`) are set appropriately if needed.
 
+
+
+
+
+# Common configurations(.env file)
+URI MONGO_URI='mongodb://yourhost:yourport/bookstore'
+JWT_SECRET=YOUR_JWT_SECRET_HERE
+MONGO_HOST=
+MONGO_PORT=
+MONGO_DATABASE=bookstore
+ADMIN_USERNAME=adminTera
+ADMIN_PASSWORD=Gloaster@areT
+
 # BookApp Authentication 
 
 This module provides authentication endpoints for logging in and signing up users in a NestJS application.
