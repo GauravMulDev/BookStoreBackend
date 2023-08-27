@@ -5,12 +5,13 @@ import { PassportModule } from "@nestjs/passport";
 import { JwtModule } from "@nestjs/jwt";
 import { AuthController } from "./auth.controller";
 import { JwtStrategy } from "./jwt.strategy";
+import { BookModule } from "src/book/book.module";
 
 @Module({
   imports: [
     UserModule,
     PassportModule,
-
+    BookModule,
     JwtModule.register({
       secret: "YOUR_JWT_SECRET_HERE",
       signOptions: { expiresIn: "60m" },

@@ -12,6 +12,7 @@ import { BookModule } from "./book/book.module";
 import { ConfigModule } from "@nestjs/config";
 import { AdminModule } from "./guards/admin/admin.module";
 import { MongodbService } from "./mongodb/mongodb.service";
+import { ApplicationEventsGateway } from "./events.gateway";
 
 let mongoUri: string;
 const MONGO_HOST = process.env.MONGO_HOST || "localhost";
@@ -46,6 +47,11 @@ if (process.env.DB_AUTHENTICATION === "true") {
     UserModule,
     AdminModule,
   ],
-  providers: [UserService, AuthService, MongodbService],
+  providers: [
+    UserService,
+    AuthService,
+    MongodbService,
+    ApplicationEventsGateway,
+  ],
 })
 export class AppModule {}

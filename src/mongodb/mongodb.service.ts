@@ -1,11 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { MongoClient, Db } from 'mongodb';
-import * as path from 'path';
+import { Injectable } from "@nestjs/common";
+import { MongoClient, Db } from "mongodb";
+import * as path from "path";
 
-import { exec } from 'child_process';
-import * as fs from 'fs';
+import { exec } from "child_process";
+import * as fs from "fs";
 
-import * as archiver from 'archiver';
+import * as archiver from "archiver";
 
 @Injectable()
 export class MongodbService {
@@ -13,7 +13,7 @@ export class MongodbService {
   private _db: Db;
 
   constructor() {
-    this.client = new MongoClient('mongodb://localhost:27017', {});
+    this.client = new MongoClient("mongodb://localhost:27017", {});
   }
   async connect(): Promise<void> {
     if (!this._db) {
@@ -24,14 +24,14 @@ export class MongodbService {
 
   get db(): Db {
     if (!this._db) {
-      throw new Error('Client is not connected');
+      throw new Error("Client is not connected");
     }
     return this._db;
   }
 
   async getFieldsFromCollection(
     dbName: string,
-    collectionName: string,
+    collectionName: string
   ): Promise<string[]> {
     if (!this._db) {
       await this.client.connect();
@@ -43,7 +43,7 @@ export class MongodbService {
     const document = await collection.findOne({});
 
     if (!document) {
-      throw new Error('No documents in collection.');
+      throw new Error("No documents in collection.");
     }
 
     return Object.keys(document);
@@ -57,7 +57,7 @@ export class MongodbService {
   }
 
   async dumpDatabase(databaseName: string): Promise<string> {
-    const dumpPath = path.join(__dirname, '..', 'mongodumps', databaseName);
+    const dumpPath = path.join(__dirname, "..", "mongodumps", databaseName);
 
     if (!fs.existsSync(dumpPath)) {
       fs.mkdirSync(dumpPath, { recursive: true });
@@ -77,11 +77,11 @@ export class MongodbService {
   async zipDirectory(source: string): Promise<string> {
     const zipPath = `${source}.zip`;
     const output = fs.createWriteStream(zipPath);
-    const archive = archiver('zip', { zlib: { level: 9 } });
+    const archive = archiver("zip", { zlib: { level: 9 } });
 
     return new Promise((resolve, reject) => {
-      output.on('close', () => resolve(zipPath));
-      archive.on('error', (err) => reject(err));
+      output.on("close", () => resolve(zipPath));
+      archive.on("error", (err) => reject(err));
 
       archive.pipe(output);
       archive.directory(source, false);

@@ -1,0 +1,22 @@
+__v,_id,description,filePath,price,rating,title
+0,64df71384d9c4c0225b6bbc6,Test me,,40,4,Test1
+0,64df78c730baa83c14d86918,Your book description here,,30,1,Test
+0,64df7913c400d9daa421c584,Your book description here,,20,1,Dump
+0,64df8712f2bdba126ca2f4a4,Your book description heressss,uploads/21u21edm.jpg,300,4,Restt
+0,64df8b2270a13f3f5cc2a27f,Your book description heressss,uploads/5065azsv.jpg,300,4,Restt
+0,64df8b3470a13f3f5cc2a281,Your book description heressss,uploads/f6imv748.jpg,310,5,better
+0,64df8b9070a13f3f5cc2a283,Your book description heressss,uploads/blanldhu.jpg,1000,5,share
+0,64df8b9570a13f3f5cc2a285,Your book description heressss,uploads/sc8rb0t7.jpg,900,4,Fare
+0,64df8cd20c90db9f64a5a431,Your book description heressss,uploads/pc96lj0d.jpg,300,4,Restt
+0,ObjectId(64df71384d9c4c0225b6bbc6),Test me,,40,3,Test1
+0,ObjectId(64df78c730baa83c14d86918),Your book description here,,30,1,Test
+0,ObjectId(64df7913c400d9daa421c584),Your book description here,,20,1,Dump
+0,ObjectId(64df8712f2bdba126ca2f4a4),Your book description heressss,,300,4,Restt
+0,ObjectId(64df8b2270a13f3f5cc2a27f),Your book description heressss,,300,4,Restt
+0,ObjectId(64df8b3470a13f3f5cc2a281),Your book description heressss,,310,5,better
+0,ObjectId(64df8b9070a13f3f5cc2a283),Your book description heressss,,1000,5,share
+0,ObjectId(64df8b9570a13f3f5cc2a285),Your book description heressss,,900,0,Fare
+0,ObjectId(64df8cd20c90db9f64a5a431),Your book description heressss,,300,4,Restt
+0,ObjectId(64df8d1e0c90db9f64a5a433),Your book description heressss,,10,4,Treat
+0,ObjectId(64df8d220c90db9f64a5a435),Your book description heressss,,500,3,Jest
+0,ObjectId(64e0970e157883546b0849fb),Your book description heressss,,200,4,Glow
